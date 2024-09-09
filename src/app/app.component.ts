@@ -9,5 +9,28 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'pwg';
+  password = '';
+  includeLetters = false;
+  includeNumbers = false;
+  includeSymbols = false;
+
+  onChangeUseLetters(){
+    this.includeLetters = !this.includeLetters;
+  }
+
+  onChangeUseNumbers(){
+    this.includeNumbers = !this.includeNumbers;
+  }
+
+  onChangeUseSymbols(){
+    this.includeSymbols = !this.includeSymbols;
+  }
+
+  onButtonCLick(){
+    console.log(this.includeLetters);
+    console.log(this.includeNumbers);
+    console.log(this.includeSymbols);
+    this.password = 'My Password is..';
+    
+  }
 }
